@@ -271,12 +271,13 @@ header {
 /*PROGRAM flex*/
 .programme-container {
     display: flex;
-    flex-direction: row wrap;
+    flex-flow: row wrap;
 width: 100%;
 max-width: 750px;
 padding-bottom: 40pt;
 min-height: 200px;
 margin-top: -10pt;
+    row-gap: 15pt;
 }
 
 .event {
@@ -329,10 +330,48 @@ margin-top: -10pt;
         width: 100%;
     }
 
-
     .programme-container {
-        flex-direction: column-reverse;
+        flex-direction: column;
+        row-gap: 0;
+
     }
+
+    .programme-container :nth-child(1) {
+        order: 2;
+    }
+
+    .programme-container :nth-child(2) {
+        order: 1;
+    }
+
+    .programme-container :nth-child(3) {
+        order: 4;
+    }
+
+    .programme-container :nth-child(4) {
+        order: 3;
+    }
+
+    .programme-container :nth-child(5) {
+        order: 6;
+    }
+
+    .programme-container :nth-child(6) {
+        order: 5;
+    }
+
+    .programme-container :nth-child(7) {
+        order: 8;
+    }
+
+    .programme-container :nth-child(8) {
+        order: 7;
+    }
+
+    .event {
+        margin-bottom: 10pt;
+    }
+    
     .programme-container > *{
         text-align: left;
         width: 100%;
