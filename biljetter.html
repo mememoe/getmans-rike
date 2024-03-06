@@ -22,11 +22,12 @@
     </header>
 
 <main> <!--kort information: vilken film, längd, plats-->
+    <div class="main-content tickets">
     <h1>Köp biljetter</h1>
     <p>Getmans rike (1 tim 45 min), CNEMA Norrköping</p>
 
 <div> <!--välja från 5 dagar in i framtiden-->
-    <h2 class="h2">Välj dag</h2>
+    <h2 >Välj dag</h2>
     <select name="dag" id="välja-dag">
         <option>21 juni</option>
         <option>22 juni</option>
@@ -37,8 +38,8 @@
     </select>
 </div>
     
-
-<h2 class="h2">Välj tid</h2> <!--div tabell: visar tid, salong, misc om filen typ ålersgräns osv. bokningsknapp, antal platser-->
+<div>
+<h2>Välj tid</h2> <!--div tabell: visar tid, salong, misc om filen typ ålersgräns osv. bokningsknapp, antal platser-->
 
         <div class="tabell-rad">
             <div class="tid-cell"><p class="tid">15.00</p></div>
@@ -55,10 +56,10 @@
             <div class="salong-cell"><span>Salong 1</span><p>Sv tal | 16 år</p></div>
             <div class="boka-cell"><button type="button" class="väljknapp">Välj</button> <p>28 platser kvar</p> </div>
         </div>
-
-
+    </div>
+<div>
+    <h2>Välj antal biljetter</h2>
 <div class="antal-biljetter"> <!--antal biljetter. val och pris utifrån vem man är. total summa.-->
-<h2 class="h2">Välj antal biljetter</h2>
 <p>Ordinarie 150 kr 
     <select name="ord. biljett" id="ord-bilj">
         <option>0</option>
@@ -118,9 +119,9 @@
     <p>xx kr</p>
 </div>
 </div>
-
+</div>
 <div>
-<h2 class="h2">Betalningsmetod</h2> <!--radio typ för att användaren bara ska kunna välja ett alternativ-->
+<h2>Betalningsmetod</h2> <!--radio typ för att användaren bara ska kunna välja ett alternativ-->
 <ul id="b-metoder">
     <li><input type="radio" name="kort" value="Kortbetalning">Kortbetalning</li>
     <li><input type="radio" name="kort" value="Swish">Swish</li>
@@ -128,7 +129,7 @@
 </div>
 
 <div>
-<h3 class="h3">Uppgifter</h3> <!--textfält personuppgifter-->
+<h3>Uppgifter</h3> <!--textfält personuppgifter-->
 <form>
     <label for="förnamn">Förnamn:</label><br>
     <input type="text" id="förnamn" name="förnamn"><br>
@@ -150,9 +151,8 @@
 <div class="betalning">
     <button id="betala-knapp">Till betalning</button>
 </div>
-
+    </div>
 </main>
-
 <!--footer-->
 <footer>
     <div class="footer">
@@ -171,7 +171,7 @@
                 </li>
             </ul>
         </div>
-        <div class="mobilehide runa"><img src="bilder/runa-ash.png" alt="runa-ash"></div>
+        <div class="mobilehide runa"><img src="bilder/runa-tngd46-oak-04.png" alt="runa-oak"></div>
     </div>
     <div class="copyright"><span>&copy;Norcopia 2024</span></div>
 </footer>
