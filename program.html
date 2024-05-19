@@ -11,17 +11,23 @@
 
 <body>
  <header>
-        <nav> <!--meny-->
-            <a class="meny" href="index.html">Hem</a>
-            <a class="meny" href="om.html">Om oss</a>
-            <a class="meny" href="biljetter.html">Biljetter</a>
-        </nav>
+    <nav> <!--meny-->
+        <label for="meny-btn" class="meny-icon">meny
+        <span class="fa fa-bars"></span></label>
+        <input type="checkbox" id="meny-btn">
+        <ul class="meny">
+        <li><a href="index.html">Hem</a></li>
+        <li><a href="om.html">Om oss</a></li>
+        <li><a href="program.html">Program</a></li>
+        <li><a href="biljetter.html">Biljetter</a></li>
+        </ul>
+    </nav>
         <div class="logga-sub">
         <img src="bilder/program.png" alt="program logga"></div>
 
     </header>
 <main> <!--div table grid-->
-    <section class="main-content">
+    <div class="main-content">
         <div class="programme-container"> 
             <div class="event">
                 <p><span>Press&shy;intervjuer</span><br>NORCOPIA håller pressträff</p>
@@ -56,8 +62,7 @@
                 <p><span>21 juni</span><br>20.00, GNEMA Norrköping</p>
             </div>
         </div>
-    </section>
-    
+    </div>
 </main>
     <footer> <!--footer-->
         <div class="footer">
