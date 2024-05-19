@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Getmans rike</title>
+    <title>Startsida | Getmans rike</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://use.typekit.net/mvs2rmf.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -11,22 +11,28 @@
 
 <body>
     <div class="main-content">
-        <section class="hero"> <!--meny-->
-            <nav>
-                <a class="meny" href="om.html">Om oss</a>
-                <a class="meny" href="program.html">Program</a>
-                <a class="meny" href="biljetter.html">Biljetter</a>
-            </nav>
+        <nav> <!--meny-->
+            <label for="meny-btn" class="meny-icon">meny
+            <span class="fa fa-bars"></span></label>
+            <input type="checkbox" id="meny-btn">
+            <ul class="meny">
+            <li><a href="index.html">Hem</a></li>
+            <li><a href="om.html">Om oss</a></li>
+            <li><a href="program.html">Program</a></li>
+            <li><a href="biljetter.html">Biljetter</a></li>
+            </ul>
+        </nav>
+        <div class="hero"> <!--meny-->
             <div class="hero-content">
                 <div class="logga"><img src="bilder/loggaskugga.png" alt="logga"></div>
                 <a class="button" href="#synopsis">Om filmen</a> <!--om filmen knapp-->
-                <a class="button" href="tickets">Biljetter</a> <!--biljetter knapp-->
+                <a class="button" href="biljetter.html">Biljetter</a> <!--biljetter knapp-->
             </div>
-        </section>
+        </div>
 
         <main id="synopsis">
             <div class="galleri"> <!--galleri bilder-->
-                <div class="galleri-items"><img src="bilder/ritual-goat.jpg" alt="runes"></div>
+                <div class="galleri-items"><img src="bilder/ritual-goat.jpg" alt="ritual goat"></div>
                 <div class="galleri-items mobilehide"><img src="bilder/burning-woods.jpg" alt="burning woods"></div>
                 <div class="galleri-items mobilehide"><img src="bilder/goat.jpg" alt="goat"></div>
             </div>
@@ -43,14 +49,16 @@
                     sanning som vore farligare att veta än att leva i okunnighetens skugga.
                     <br>
                     <br>
-                    Inspirerad av Sveriges djupa skogar och mytologi bjuder filmen in till ett mardröms landskap fyllt av
+                    Inspirerad av Sveriges djupa skogar och mytologi bjuder filmen in till ett mardröms landskap fyllt
+                    av
                     mystik och nervkittlande spänning. Med atmosfärisk musik producerad av en av Östergötlands främsta
                     kompositör Julia Liljeqvist blir denna upplevelse unik och knappast något att missa.
                 </p>
             </div>
             <div class="rating"> <!--betyg/recension-->
                 <img src="bilder/rating-getmans-rike-vit.png" alt="rating">
-                <p id="rating-text">"Rysande, hisnande, atmosfärisk skräckupplevelse med inspiration från svensk mytologi. En 'must see' om man vill uppleva det senaste inom svensk film."</p> 
+                <p id="rating-text">"Rysande, hisnande, atmosfärisk skräckupplevelse med inspiration från svensk
+                    mytologi. En 'must see' om man vill uppleva det senaste inom svensk film."</p>
             </div>
         </main>
     </div>
