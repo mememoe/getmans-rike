@@ -34,15 +34,26 @@ nav {
 
 .meny {
     color: white;
-    padding: 0 10pt 10pt 0;
+    display: inline-flex;
+    padding: 10pt 0;
+}
+
+.meny li a {
+    padding: 20pt;
+    color: white;
 }
 
 nav a:hover {
     color: #a41623;
+    cursor: pointer;
+}
+
+.meny-icon+input,
+.meny-icon {
+    display: none;
 }
 
 /* HEM hero header*/
-
 .hero {
     /*storlek*/
     min-height: 100vh;
@@ -171,9 +182,6 @@ footer {
     align-items: center;
     justify-content: center;
     padding: 10pt;
-
-
-
 }
 
 .footer div {
@@ -190,8 +198,9 @@ footer {
 
 .norcopia-logga img {
     min-width: 120px;
-    max-width: 400px;
-    
+    max-width: 300px;
+
+
 }
 
 .menu-item ul {
@@ -222,22 +231,29 @@ footer {
     text-align: center;
 }
 
-/* Header PROGRAM och OM*/
-
+/* Header alla undersidor*/
 header {
     display: flex;
-    flex-flow: column;
     justify-content: center;
     align-items: center;
     color: white;
     height: 50vh;
-    background-image: url(bilder/federico-bottos-GCTeIZMXk-k-unsplash.jpg);
+    background-image: url(bilder/pinetrees.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    /*background: linear-gradient(rgba(0, 0, 0, 0)80%, rgba(0,0,0,1));*/
+    padding: 10pt;
 }
 
+.logga-sub {
+    max-width: 750px;
+}
+
+.logga-sub img {
+    width: 100%;
+}
+
+/*OM-sidan*/
 .om {
     text-align: left;
     padding: 30pt 100pt 100pt;
@@ -249,28 +265,9 @@ header {
     padding-top: 30pt;
 }
 
-.logga-sub {
-    max-width: 750px;
-}
-
-.main-content h3 {
-    font-size: 20pt;
-}
-
-#underrubrik {
-    font-size: 13pt;
-}
-
-.logga-sub img {
-    width: 100%;
-}
-
-
-/*Bilder och text OM*/
-
-
 
 /*PROGRAM flex*/
+
 .programme-container {
     display: flex;
     flex-flow: row wrap;
@@ -313,12 +310,228 @@ header {
     font-size: small;
 }
 
+/*BILJETTSIDA*/
+.tickets>* { /*container*/
+    width: 100%;
+    max-width: 770px;
+}
+
+.tickets section {
+    background-color: #0000000b;
+    border-radius: 5pt;
+    padding: 10pt;
+    margin-bottom: 20pt;
+
+}
+
+.ticket-info {
+    background-color: white;
+    margin: 0;
+    padding: 10pt;
+}
+
+.ticket-info span {
+    font-size: 12pt;
+}
+
+select {
+    width: 100%;
+    max-width: 207px;
+    padding: 10pt;
+    font-family: dovetail-mvb, sans-serif;
+    color: #fff;
+    background-color: #5d6968;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+/*välj tid*/
+.tabell-rad {
+    display: flex;
+    flex-flow: row wrap;
+    padding-bottom: 20pt;
+}
+
+.tabell-rad>div {
+    padding: 10pt;
+    flex: auto;
+}
+
+.tid-cell {
+    background-color: black;
+    color: #fff;
+    text-align: center;
+}
+
+.tid {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.salong-cell {
+    background-color: #5d6968b9;
+}
+
+.boka-cell {
+    text-align: center;
+    background-color: #5d6968b9;
+}
+
+/*välj knapp*/
+.boka-cell input {
+    display: none;
+}
+
+.boka-cell label {
+    display: inline-flex;
+    background-color: #8f010d;
+    border-radius: 5px;
+    color: #fff;
+    font-family: dovetail-mvb, sans-serif;
+    padding: 10pt;
+    cursor: pointer;
+    user-select: none;
+}
+
+.boka-cell label:hover {
+    box-shadow: inset 1px 3px 5px #000;
+}
+
+.boka-cell input:checked+label {
+    background-color: black;
+}
+
+/*antal biljetter*/
+.antal-biljetter {
+    padding: 10pt;
+    display: inline-block;
+}
+
+
+.Totalt {
+    color: #8f010d;
+    font-size: 1.3em;
+}
+
+
+
+/*betalningsmetod*/
+.payment li {
+    border: solid 1pt;
+    max-width: 750px;
+    width: 100%;
+    padding: 5pt 0;
+    transition: all 0.3s ease;
+    margin-bottom: 5pt;
+    background-color: #fff;
+}
+
+
+.payment li:hover {
+    background-color: #8f010d;
+    color: #fff;
+}
+
+.payment input:checked {
+    accent-color: #000;
+}
+
+/*uppgifter*/
+.user>* {
+    margin-bottom: 10pt;
+}
+
+.user input[type="text"] {
+    padding: 5pt 0;
+    border: solid 1pt;
+    font: inherit;
+}
+
+
+/*till betalning*/
+.submit {
+    text-align: center;
+
+}
+
+#submit-button+label {
+    display: inline-flex;
+    background-color: #8f010d;
+    border-radius: 5px;
+    color: #fff;
+    border: none;
+    font-family: lulo-one, sans-serif;
+    font-weight: 600;
+    padding: 20pt;
+}
+
+#submit-button,
+.submit span {
+    display: none;
+}
+
+#submit-button+label:hover {
+    background-color: #000;
+    box-shadow: 0px 10px 22px #a41623;
+    transition: .3s ease;
+    cursor: pointer;
+}
+
+#submit-button:checked~span {
+    display: block;
+    padding: 10pt;
+    font-weight: 600;
+}
+
+/*misc*/
+li {
+    list-style-type: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-family: dovetail-mvb, sans-serif;
+}
+
 /*Vy-anpassning*/
-@media screen and (max-width: 1024px) {
-    .mobilehide {
+@media screen and (max-width: 750px) {
+
+/*gömda element*/
+    .mobilehide,
+    .meny {
         display: none;
     }
 
+/*responsiv nav*/
+    .meny-icon {
+        display: inherit;
+        padding: 10pt;
+        color: white;
+    }
+
+    .meny-icon:hover,
+    .meny-icon:active {
+        color: #a41623;
+        cursor: pointer;
+    }
+
+    #meny-btn:checked+ul {
+        display: inherit;
+        background-color: #000000ad;
+    }
+
+    .meny li {
+        padding: 5pt;
+
+    }
+
+    /*responsiv footer*/
     .footer {
         display: flex;
         flex-flow: column wrap;
@@ -332,36 +545,32 @@ header {
         width: 100%;
     }
 
-    .programme-container {
+/*program-sidan anpassning*/
+    .programme-container,
+    .tabell-rad>div {
         flex-direction: column;
+        width: 100%;
         row-gap: 0;
-
     }
 
     .programme-container :nth-child(1) {
         order: 2;
     }
-
     .programme-container :nth-child(2) {
         order: 1;
     }
-
     .programme-container :nth-child(3) {
         order: 4;
     }
-
     .programme-container :nth-child(4) {
         order: 3;
     }
-
     .programme-container :nth-child(5) {
         order: 6;
     }
-
     .programme-container :nth-child(6) {
         order: 5;
     }
-
     .programme-container :nth-child(7) {
         order: 8;
     }
@@ -377,174 +586,4 @@ header {
         text-align: left;
         width: 100%;
     }
-}
-
-/*BILJETTSIDA*/
-
-/*container*/
-.tickets div{
-max-width: 750px;
-align-self: left;
-}
-
-
-
-#välja-dag {
-    padding: 1em 10em 1em 1em;
-    font-family: dovetail-mvb, sans-serif;
-    color: #fff;
-    background-color: #5d6968;
-    border: none;
-}
-
-
-/*välj tid*/
-.tabell-rad {
-    display: flex;
-    flex-direction: row wrap;
-    width: 100%;
-    max-width: 750px;
-    padding-bottom: 20pt;
-}
-
-.tid-cell  {
-    background-color: black;
-    color: #fff;
-    padding: 10pt;
-    flex: 1;
-
-}
-
-.tid {
-    font-size: 1.5em;
-    font-weight: 600;
-}
-
-.salong-cell {
-    padding: 2em 17em 0em 3em;
-    background-color: #5d6968b9;
-}
-
-.boka-cell {
-    padding: 2em 2em 0em 2em;
-    text-align: center;
-    background-color: #5d6968b9;
-    flex: 1;
-}
-
-
-
-.väljknapp {
-    padding: 1em 1.5em 1em 1.5em;
-    border: none;
-    background-color: #8f010d;
-    border-radius: 5px;
-    color: #fff;
-
-}
-
-.väljknapp:hover {
-    background-color: #000;
-}
-
-/*antal biljetter*/
-.antal-biljetter {
-    background-color: #5d6968a3;
-}
-
-#ord-bilj {
-    font-family: dovetail-mvb, sans-serif;
-    color: #fff;
-    background-color: #5d6968;
-    border: none;
-    margin-left: 1em;
-}
-
-#pen-bilj {
-    font-family: dovetail-mvb, sans-serif;
-    color: #fff;
-    background-color: #5d6968;
-    border: none;
-    margin-left: 1em;
-}
-
-#ung-bilj {
-    font-family: dovetail-mvb, sans-serif;
-    color: #fff;
-    background-color: #5d6968;
-    border: none;
-    margin-left: 1em;
-}
-
-.Totalt {
-    color: #8f010d;
-    padding: 0.2em 0em 0.5em 2em;
-    margin: 1em 0em 3em 0em;
-}
-
-/*betalningsmetod*/
-#b-metoder li {
-    border: #000 solid 1px;
-    max-width: 600px;
-    padding: 0.5em;
-    margin-top: 10px;
-}
-
-#b-metoder li:hover {
-    background-color: #8f010d;
-    color: #fff;
-}
-
-/*uppgifter*/
-#förnamn {
-    padding: 0.5em;
-    margin-bottom: 1em;
-}
-
-#efternamn {
-    padding: 0.5em;
-    margin-bottom: 1em;
-}
-
-#email {
-    padding: 0.5em;
-    margin-bottom: 1em;
-}
-
-h3 {
-    margin-top: 1.5em;
-}
-
-
-/*till betalning*/
-.betalning {
-    text-align: center;
-}
-
-#betala-knapp {
-    background-color: #8f010d;
-    border-radius: 5px;
-    color: #fff;
-    border: none;
-    padding: 2em 4em;
-    font-family: lulo-one, sans-serif;
-    font-weight: 600;
-    margin-top: 2em;
-}
-
-button a {
-    color: #fff;
-}
-
-#betala-knapp:hover {
-    background-color: #000;
-    box-shadow: 0px 10px 22px #a41623;
-}
-
-/*misc*/
-li {
-    list-style-type: none;
-}
-p {
-    font-family: dovetail-mvb, sans-serif;;
 }
